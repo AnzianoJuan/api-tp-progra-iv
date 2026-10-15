@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using api.Services;
-using api.DTOs;
+using api.DTOs.Paciente;
 
 namespace back.Controllers
 {
