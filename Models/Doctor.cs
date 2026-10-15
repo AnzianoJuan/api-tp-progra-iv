@@ -9,5 +9,5 @@ public class Doctor : Usuario
     //public List<HorarioAtencion> Horarios { get; set; } = new(); //A charlar todavia
 
     // Turnos asignados a este doctor
-    public List<Turno> Turnos { get; set; } = new();
+    //public List<Turno> Turnos { get; set; } = new();
 }

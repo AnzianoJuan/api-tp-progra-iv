@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using api.Services;
-using api.DTOs.Paciente;
+using api.Dtos.Paciente;
+using api.Utils.Respuestas;
+using System.Net;
 
 namespace back.Controllers
 {
@@ -11,27 +13,36 @@ namespace back.Controllers
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public class UsuarioController : ControllerBase
     {
-        private readonly UsuariosServices _service;
-        public UsuarioController(UsuariosServices service)
+        private readonly UsuarioServices _service;
+        public UsuarioController(UsuarioServices service)
         {
             _service = service;
         }
 
-        [HttpPost("/pacientes")]
+        [HttpPost("pacientes")]
         [ProducesResponseType(typeof(Respuesta), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(Respuesta), StatusCodes.Status400BadRequest)]
+
         public ActionResult<Respuesta> CrearPaciente([FromBody] CrearPacienteDTO crearDto)
         {
-            var paciente = _service.CrearUnPaciente(crearDto);
-            if (paciente == null)
+            try
             {
-                return;//error que no pudo crear correctamente
-            }
-            Respuesta res = new Respuesta("Se creo correctamente!")
-            {
-                Datos = paciente,
-            };
+                var paciente = _service.CrearUnPaciente(crearDto);
+                RespuestaExito exito = new RespuestaExito(
+                    "Se creo correctamente!",
+                    HttpStatusCode.Created,
+                    paciente
+                );
 
-            return Created("api/Usuario/pacientes", res);
+                return StatusCode((int)exito.CodigoEstado, exito.Res);
+            }
+            catch (Exception error)
+            {
+                return StatusCode(
+                    StatusCodes.Status500InternalServerError,
+                    new Respuesta(error.Message)
+                );
+            }
         }
 
 

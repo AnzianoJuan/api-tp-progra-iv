@@ -1,0 +1,42 @@
+[
+  {
+    "ContainingType": "back.Controllers.UsuarioController",
+    "Method": "CrearPaciente",
+    "RelativePath": "api/Usuario/pacientes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "crearDto",
+        "Type": "api.Dtos.Paciente.CrearPacienteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      },
+      {
+        "Type": "api.Utils.Respuestas.Respuesta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 201
+      },
+      {
+        "Type": "api.Utils.Respuestas.Respuesta",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  }
+]

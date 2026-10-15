@@ -1,12 +1,18 @@
-﻿namespace api.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace api.Models;
 
 public class Usuario
 {
+
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
     public string Nombre { get; set; } = string.Empty;
     public string Apellido { get; set; } = string.Empty;
     public string Dni { get; set; } = string.Empty;
-    public DateTime FecNac { get; set; }
+    public DateOnly FecNac { get; set; }
     public string Telefono { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
 
