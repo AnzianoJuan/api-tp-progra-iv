@@ -64,6 +64,49 @@ namespace api.Services
            
         }
 
+        public Paciente ModificarPaciente(int id, CrearPacienteDTO dto)
+        {
+            var paciente = _db.Pacientes.FirstOrDefault(p => p.Id == id);
+
+            if (paciente == null)
+            {
+                throw new RespuestaError(
+                    $"El paciente con id = {id} no se encontro",
+                    HttpStatusCode.NotFound
+                );
+            }
+
+            paciente.Nombre = dto.Nombre;
+            paciente.Apellido = dto.Apellido;
+            paciente.Dni = dto.Dni;
+            paciente.Email = dto.Email;
+            paciente.Contraseña = dto.Contraseña;
+            paciente.FecNac = dto.FecNac;
+            paciente.NroAfiliado = dto.NroAfiliado;
+            paciente.ObraSocial = dto.ObraSocial;
+            paciente.Telefono = dto.Telefono;
+
+            _db.SaveChanges();
+
+            return paciente;
+        }
+
+        public void EliminarPaciente(int id)
+        {
+            var paciente = _db.Pacientes.FirstOrDefault(p => p.Id == id);
+
+            if (paciente == null)
+            {
+                throw new RespuestaError(
+                    $"El paciente con id = {id} no se encontro",
+                    HttpStatusCode.NotFound
+                );
+            }
+
+            _db.Pacientes.Remove(paciente);
+            _db.SaveChanges();
+        }
+
 
     }
 }
