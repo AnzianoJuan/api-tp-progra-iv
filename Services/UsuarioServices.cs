@@ -3,6 +3,7 @@ using api.Utils.Respuestas;
 using api.Dtos.Paciente;
 using System.Net;
 using api.Config;
+using api.DTOs.Paciente;
 
 namespace api.Services
 {
@@ -64,28 +65,44 @@ namespace api.Services
            
         }
 
-        public Paciente ModificarPaciente(int id, CrearPacienteDTO dto)
+           public Paciente ActualizarUnoPorId(int id, ActualizarPacienteDTO dto)
         {
-            var paciente = _db.Pacientes.FirstOrDefault(p => p.Id == id);
+            Paciente paciente = ObtenerUnoPorId(id);
 
-            if (paciente == null)
+            if (dto.Nombre != null)
             {
-                throw new RespuestaError(
-                    $"El paciente con id = {id} no se encontro",
-                    HttpStatusCode.NotFound
-                );
+                paciente.Nombre = dto.Nombre;
+            }
+            if (dto.Apellido != null)
+            {
+                paciente.Apellido = dto.Apellido;
+            }
+            if (dto.Dni != null)
+            {
+                paciente.Dni = dto.Dni;
+            }
+            if (dto.Email != null)
+            {
+                paciente.Email = dto.Email;
+            }
+            if (dto.Contraseña != null)
+            {
+                paciente.Contraseña = dto.Contraseña;
+            }
+            if (dto.NroAfiliado != null)
+            {
+                paciente.NroAfiliado = dto.NroAfiliado;
+            }
+            if (dto.ObraSocial != null)
+            {
+                paciente.ObraSocial = dto.ObraSocial;
+            }
+            if (dto.Telefono != null)
+            {
+                paciente.Telefono = dto.Telefono;
             }
 
-            paciente.Nombre = dto.Nombre;
-            paciente.Apellido = dto.Apellido;
-            paciente.Dni = dto.Dni;
-            paciente.Email = dto.Email;
-            paciente.Contraseña = dto.Contraseña;
-            paciente.FecNac = dto.FecNac;
-            paciente.NroAfiliado = dto.NroAfiliado;
-            paciente.ObraSocial = dto.ObraSocial;
-            paciente.Telefono = dto.Telefono;
-
+            _db.Pacientes.Update(paciente);
             _db.SaveChanges();
 
             return paciente;
@@ -93,16 +110,7 @@ namespace api.Services
 
         public void EliminarPaciente(int id)
         {
-            var paciente = _db.Pacientes.FirstOrDefault(p => p.Id == id);
-
-            if (paciente == null)
-            {
-                throw new RespuestaError(
-                    $"El paciente con id = {id} no se encontro",
-                    HttpStatusCode.NotFound
-                );
-            }
-
+            Paciente paciente = ObtenerUnoPorId(id);
             _db.Pacientes.Remove(paciente);
             _db.SaveChanges();
         }
