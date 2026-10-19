@@ -22,6 +22,29 @@ namespace api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("api.Models.ObraSocial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("ObrasSociales");
+                });
+
             modelBuilder.Entity("api.Models.Paciente", b =>
                 {
                     b.Property<int>("Id")
@@ -62,8 +85,8 @@ namespace api.Migrations
                     b.Property<string>("NroAfiliado")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ObraSocial")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("ObraSocialId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Telefono")
                         .IsRequired()
@@ -71,7 +94,18 @@ namespace api.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ObraSocialId");
+
                     b.ToTable("Pacientes");
+                });
+
+            modelBuilder.Entity("api.Models.Paciente", b =>
+                {
+                    b.HasOne("api.Models.ObraSocial", "ObraSocial")
+                        .WithMany()
+                        .HasForeignKey("ObraSocialId");
+
+                    b.Navigation("ObraSocial");
                 });
 #pragma warning restore 612, 618
         }

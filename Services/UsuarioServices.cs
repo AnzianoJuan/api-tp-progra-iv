@@ -14,21 +14,25 @@ namespace api.Services
 
         private readonly AppDbContext _db;
 
-        //lista de prueba de PAcientes
-        private static readonly List<Paciente> _pacientes = new()
-        {
-            new Paciente() { Id = 1, Nombre = "Jorge", Apellido = "Rosettani viejo nomas" , Dni = "777",FecNac = DateOnly.FromDateTime(DateTime.Today), Telefono= "claro 343434", Email="jorg@",Contraseña="top secret",IsAdmin = false,FechaCreacion=DateTime.Now,ObraSocial="osde"},
-            new Paciente() { Id = 2, Nombre = "juani", Apellido = "Rosettani viejo nomas" , Dni = "777",FecNac = DateOnly.FromDateTime(DateTime.Today), Telefono= "claro 343434", Email="juan@",Contraseña="top secret",IsAdmin = false,FechaCreacion=DateTime.Now,ObraSocial="osde"},
-            new Paciente() { Id = 3, Nombre = "claudia", Apellido = "Rosettani viejo nomas" , Dni = "777",FecNac = DateOnly.FromDateTime(DateTime.Today), Telefono= "claro 343434", Email="claude@",Contraseña="top secret",IsAdmin = false,FechaCreacion=DateTime.Now,NroAfiliado="49-99-07"},
-        };
-
 
         public UsuarioServices(AppDbContext db)
         {
             _db = db;
         }
 
-        public List<Paciente> ObtenerTodosLosPacientes() => _pacientes;
+        public List<PacienteDTO> ObtenerTodosLosPacientes()
+        {
+            var lista = _db.Pacientes.Select((p) => new PacienteDTO()
+            {
+                Id = p.Id,
+                Nombre = p.Nombre,
+                Apellido = p.Apellido,
+                Dni = p.Dni,
+                NroAfiliado = p.NroAfiliado,
+                //ObraSocial = p.ObraSocial.Nombre,
+            }).ToList();
+            return lista;
+        }
 
         public Paciente ObtenerUnoPorId(int id)
         {
@@ -55,11 +59,10 @@ namespace api.Services
                 FechaCreacion = DateTime.Now,
                 FecNac = dto.FecNac,
                 NroAfiliado = dto.NroAfiliado,
-                ObraSocial = dto.ObraSocial,
+                //ObraSocial = dto.ObraSocial,
                 Telefono = dto.Telefono,
             };
             _db.Pacientes.Add(paciente);
-            _pacientes.Add(paciente);//dejamos esta de prueba por ahora
             _db.SaveChanges();
             return paciente;
            
@@ -95,7 +98,7 @@ namespace api.Services
             }
             if (dto.ObraSocial != null)
             {
-                paciente.ObraSocial = dto.ObraSocial;
+                //paciente.ObraSocial = dto.ObraSocial;
             }
             if (dto.Telefono != null)
             {

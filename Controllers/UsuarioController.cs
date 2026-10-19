@@ -22,7 +22,6 @@ namespace back.Controllers
 
         [HttpPost("pacientes")]
         [ProducesResponseType(typeof(Respuesta), StatusCodes.Status201Created)]
-        [ProducesResponseType(typeof(Respuesta), StatusCodes.Status400BadRequest)]
         public ActionResult<Respuesta> CrearPaciente([FromBody] CrearPacienteDTO crearDto)
         {
             try
@@ -35,6 +34,10 @@ namespace back.Controllers
                 );
 
                 return StatusCode((int)exito.CodigoEstado, exito.Res);
+            }
+            catch (RespuestaError error)
+            {
+                return StatusCode((int)error.CodigoEstado, error.Res);
             }
             catch (Exception error)
             {
@@ -59,6 +62,9 @@ namespace back.Controllers
                 );
 
                 return StatusCode((int)exito.CodigoEstado, exito.Res);
+            }catch(RespuestaError error)
+            {
+                return StatusCode((int)error.CodigoEstado, error.Res);
             }
             catch (Exception error)
             {
@@ -84,7 +90,11 @@ namespace back.Controllers
                 );
 
                 return StatusCode((int)exito.CodigoEstado, exito.Res);
+            }catch (RespuestaError error)
+            {
+                return StatusCode((int)error.CodigoEstado, error.Res);
             }
+            
             catch (Exception error)
             {
                 return StatusCode(
@@ -96,8 +106,6 @@ namespace back.Controllers
 
         [HttpPut("pacientes/{id}")]
         [ProducesResponseType(typeof(Respuesta), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(Respuesta), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Respuesta), StatusCodes.Status404NotFound)]
         public ActionResult<Respuesta> ActualizarUnoPorId(int id, [FromBody] ActualizarPacienteDTO dto)
         {
             try
@@ -122,13 +130,16 @@ namespace back.Controllers
 
         [HttpDelete("pacientes/{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        [ProducesResponseType(typeof(Respuesta), StatusCodes.Status404NotFound)]
         public ActionResult Eliminar(int id)
         {
             try
             {
                 _service.EliminarPaciente(id);
                 return NoContent();
+            }
+            catch (RespuestaError error)
+            {
+                return StatusCode((int)error.CodigoEstado, error.Res);
             }
             catch (Exception error)
             {
