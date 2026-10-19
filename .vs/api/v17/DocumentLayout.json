@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019214441_AddObraSocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20261019214441_AddObraSocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\dtos\\paciente\\actualizarpacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:dtos\\paciente\\actualizarpacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\migrations\\20261019214441_addobrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:migrations\\20261019214441_addobrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220008_AddColumnaEnPaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20261019220008_AddColumnaEnPaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\dtos\\paciente\\crearpacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +35,16 @@
       "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\dtos\\paciente\\actualizarpacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:dtos\\paciente\\actualizarpacientedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:services\\usuarioservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|solutionrelative:models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C7296F3C-05F8-480F-81B1-B135255A618B}|api.csproj|c:\\users\\juani\\desktop\\acces\\utn-programacion\\2do-a\u00F1o\\2do-cuatrimestre\\programacion-iv\\tp-progra-iv\\api\\api\\config\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +70,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs",
+              "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs",
+              "RelativeToolTip": "Migrations\\20261019220510_AddColumnaEnPacienteYagregadaLaColumnaId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T22:05:10.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20261019220008_AddColumnaEnPaciente.cs",
+              "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220008_AddColumnaEnPaciente.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261019220008_AddColumnaEnPaciente.cs",
+              "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019220008_AddColumnaEnPaciente.cs",
+              "RelativeToolTip": "Migrations\\20261019220008_AddColumnaEnPaciente.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T22:00:09.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "20261019214441_AddObraSocial.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019214441_AddObraSocial.cs",
               "RelativeDocumentMoniker": "Migrations\\20261019214441_AddObraSocial.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Migrations\\20261019214441_AddObraSocial.cs",
               "RelativeToolTip": "Migrations\\20261019214441_AddObraSocial.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwEoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowEoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:44:41.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Config\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Config\\AppDbContext.cs",
@@ -83,25 +117,24 @@
               "RelativeToolTip": "Config\\AppDbContext.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwAsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:34:55.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T21:34:55.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "ObraSocial.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\ObraSocial.cs",
               "RelativeDocumentMoniker": "Models\\ObraSocial.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\ObraSocial.cs",
               "RelativeToolTip": "Models\\ObraSocial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:32:13.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\Doctor.cs",
               "RelativeDocumentMoniker": "Models\\Doctor.cs",
@@ -109,38 +142,37 @@
               "RelativeToolTip": "Models\\Doctor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:20:31.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T21:20:31.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwFIAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwFIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:15:53.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CrearPacienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\DTOs\\Paciente\\CrearPacienteDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\Paciente\\CrearPacienteDTO.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\DTOs\\Paciente\\CrearPacienteDTO.cs",
               "RelativeToolTip": "DTOs\\Paciente\\CrearPacienteDTO.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwAoAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:11:42.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "ActualizarPacienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\DTOs\\Paciente\\ActualizarPacienteDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\Paciente\\ActualizarPacienteDTO.cs",
@@ -148,38 +180,37 @@
               "RelativeToolTip": "DTOs\\Paciente\\ActualizarPacienteDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:11:24.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T21:11:24.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\Usuario.cs",
               "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAuwA8AAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:11:17.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Paciente.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\Paciente.cs",
               "RelativeDocumentMoniker": "Models\\Paciente.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Models\\Paciente.cs",
               "RelativeToolTip": "Models\\Paciente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:11:09.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PacienteDTO.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\DTOs\\Paciente\\PacienteDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\Paciente\\PacienteDTO.cs",
@@ -187,18 +218,17 @@
               "RelativeToolTip": "DTOs\\Paciente\\PacienteDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-19T21:11:05.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T21:11:05.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "UsuarioServices.cs",
               "DocumentMoniker": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Services\\UsuarioServices.cs",
               "RelativeDocumentMoniker": "Services\\UsuarioServices.cs",
               "ToolTip": "C:\\Users\\juani\\Desktop\\acces\\UTN-PROGRAMACION\\2DO-A\u00D1O\\2DO-CUATRIMESTRE\\programacion-iv\\TP-PROGRA-iv\\api\\api\\Services\\UsuarioServices.cs",
               "RelativeToolTip": "Services\\UsuarioServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwHcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-19T21:08:50.108Z",
               "EditorCaption": ""

@@ -75,6 +75,9 @@ namespace api.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("IdObraSocial")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
@@ -85,16 +88,13 @@ namespace api.Migrations
                     b.Property<string>("NroAfiliado")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ObraSocialId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Telefono")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ObraSocialId");
+                    b.HasIndex("IdObraSocial");
 
                     b.ToTable("Pacientes");
                 });
@@ -103,7 +103,7 @@ namespace api.Migrations
                 {
                     b.HasOne("api.Models.ObraSocial", "ObraSocial")
                         .WithMany()
-                        .HasForeignKey("ObraSocialId");
+                        .HasForeignKey("IdObraSocial");
 
                     b.Navigation("ObraSocial");
                 });
