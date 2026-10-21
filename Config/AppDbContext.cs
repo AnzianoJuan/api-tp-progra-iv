@@ -11,10 +11,32 @@ namespace api.Config
 
         public DbSet<ObraSocial> ObrasSociales { get; set; }
 
+        public DbSet<Doctor> Doctores { get; set; }
+        public DbSet<Turno> Turnos { get; set; }
+
+        public DbSet<Consultorio> Consultorios { get; set; }
+
+
+
         protected override void  OnModelCreating(ModelBuilder modelBuilder)
         {
-            //validacion para que haya una sola obra social
-            modelBuilder.Entity<ObraSocial>().HasIndex(o => o.Nombre).IsUnique();
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ObraSocial>()
+                .HasIndex(o => o.Nombre)
+                .IsUnique();
+
+            modelBuilder.Entity<Usuario>()
+                .HasIndex(u => u.Dni)
+                .IsUnique();
+
+            modelBuilder.Entity<Usuario>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
+            modelBuilder.Entity<Consultorio>()
+                .HasIndex(c => c.Nombre)
+                .IsUnique();
         }
        
 

@@ -22,6 +22,26 @@ namespace api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("api.Models.Consultorio", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Consultorios");
+                });
+
             modelBuilder.Entity("api.Models.ObraSocial", b =>
                 {
                     b.Property<int>("Id")
@@ -45,7 +65,41 @@ namespace api.Migrations
                     b.ToTable("ObrasSociales");
                 });
 
-            modelBuilder.Entity("api.Models.Paciente", b =>
+            modelBuilder.Entity("api.Models.Turno", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ConsultorioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateOnly>("Fecha")
+                        .HasColumnType("date");
+
+                    b.Property<TimeOnly>("Hora")
+                        .HasColumnType("time");
+
+                    b.Property<int>("PacienteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ConsultorioId");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PacienteId");
+
+                    b.ToTable("Turnos");
+                });
+
+            modelBuilder.Entity("api.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,22 +115,24 @@ namespace api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
                     b.Property<string>("Dni")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateOnly>("FecNac")
                         .HasColumnType("date");
 
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("IdObraSocial")
-                        .HasColumnType("int");
 
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
@@ -85,18 +141,76 @@ namespace api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NroAfiliado")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Telefono")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Dni")
+                        .IsUnique();
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("Usuario");
+
+                    b.HasDiscriminator().HasValue("Usuario");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("api.Models.Doctor", b =>
+                {
+                    b.HasBaseType("api.Models.Usuario");
+
+                    b.Property<string>("Especialidad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Doctor");
+                });
+
+            modelBuilder.Entity("api.Models.Paciente", b =>
+                {
+                    b.HasBaseType("api.Models.Usuario");
+
+                    b.Property<int?>("IdObraSocial")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NroAfiliado")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("IdObraSocial");
 
-                    b.ToTable("Pacientes");
+                    b.HasDiscriminator().HasValue("Paciente");
+                });
+
+            modelBuilder.Entity("api.Models.Turno", b =>
+                {
+                    b.HasOne("api.Models.Consultorio", "Consultorio")
+                        .WithMany("Turnos")
+                        .HasForeignKey("ConsultorioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("api.Models.Doctor", "Doctor")
+                        .WithMany("Turnos")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("api.Models.Paciente", "Paciente")
+                        .WithMany("Turnos")
+                        .HasForeignKey("PacienteId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Consultorio");
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Paciente");
                 });
 
             modelBuilder.Entity("api.Models.Paciente", b =>
@@ -106,6 +220,21 @@ namespace api.Migrations
                         .HasForeignKey("IdObraSocial");
 
                     b.Navigation("ObraSocial");
+                });
+
+            modelBuilder.Entity("api.Models.Consultorio", b =>
+                {
+                    b.Navigation("Turnos");
+                });
+
+            modelBuilder.Entity("api.Models.Doctor", b =>
+                {
+                    b.Navigation("Turnos");
+                });
+
+            modelBuilder.Entity("api.Models.Paciente", b =>
+                {
+                    b.Navigation("Turnos");
                 });
 #pragma warning restore 612, 618
         }

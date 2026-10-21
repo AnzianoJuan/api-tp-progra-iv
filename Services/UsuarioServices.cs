@@ -4,6 +4,8 @@ using api.Dtos.Paciente;
 using System.Net;
 using api.Config;
 using api.DTOs.Paciente;
+using api.Dtos.Doctor;
+using api.DTOs.Doctor;
 
 namespace api.Services
 {
@@ -59,7 +61,7 @@ namespace api.Services
                 FechaCreacion = DateTime.Now,
                 FecNac = dto.FecNac,
                 NroAfiliado = dto.NroAfiliado,
-                //ObraSocial = dto.ObraSocial,
+                IdObraSocial = dto.IdObraSocial,
                 Telefono = dto.Telefono,
             };
             _db.Pacientes.Add(paciente);
@@ -96,9 +98,9 @@ namespace api.Services
             {
                 paciente.NroAfiliado = dto.NroAfiliado;
             }
-            if (dto.ObraSocial != null)
+            if (dto.IdObraSocial != null)
             {
-                //paciente.ObraSocial = dto.ObraSocial;
+                paciente.IdObraSocial = dto.IdObraSocial;
             }
             if (dto.Telefono != null)
             {
@@ -118,6 +120,96 @@ namespace api.Services
             _db.SaveChanges();
         }
 
+        public List<DoctorDTO> ObtenerTodosLosDoctores()
+        {
+            return _db.Doctores
+                .Select(d => new DoctorDTO
+                {
+                    Id = d.Id,
+                    Nombre = d.Nombre,
+                    Apellido = d.Apellido,
+                    Especialidad = d.Especialidad
+                })
+                .ToList();
+        }
 
+        public Doctor ObtenerUnDoctorPorId(int id)
+        {
+            var doctor = _db.Doctores.FirstOrDefault(d => d.Id == id);
+
+            if (doctor == null)
+            {
+                throw new RespuestaError(
+                    $"El doctor con id = {id} no se encontró",
+                    HttpStatusCode.NotFound
+                );
+            }
+
+            return doctor;
+        }
+
+        public Doctor CrearUnDoctor(CrearDoctorDTO dto)
+        {
+            var doctor = new Doctor
+            {
+                Nombre = dto.Nombre,
+                Apellido = dto.Apellido,
+                Dni = dto.Dni,
+                FecNac = dto.FecNac,
+                Telefono = dto.Telefono,
+                Email = dto.Email,
+                Contraseña = dto.Contraseña,
+                Especialidad = dto.Especialidad,
+                IsAdmin = false,
+                FechaCreacion = DateTime.UtcNow
+            };
+
+            _db.Doctores.Add(doctor);
+            _db.SaveChanges();
+
+            return doctor;
+        }
+
+        public Doctor ActualizarUnoPorId(int id, ActualizarDoctorDTO dto)
+        {
+            var doctor = ObtenerUnDoctorPorId(id);
+
+            if (dto.Nombre != null)
+                doctor.Nombre = dto.Nombre;
+
+            if (dto.Apellido != null)
+                doctor.Apellido = dto.Apellido;
+
+            if (dto.Dni != null)
+                doctor.Dni = dto.Dni;
+
+            if (dto.Email != null)
+                doctor.Email = dto.Email;
+
+            if (dto.Contraseña != null)
+                doctor.Contraseña = dto.Contraseña;
+
+            if (dto.Telefono != null)
+                doctor.Telefono = dto.Telefono;
+
+            if (dto.Especialidad != null)
+                doctor.Especialidad = dto.Especialidad;
+
+            _db.Doctores.Update(doctor);
+            _db.SaveChanges();
+
+            return doctor;
+        }
+
+        public void EliminarDoctor(int id)
+        {
+            var doctor = ObtenerUnDoctorPorId(id);
+
+            _db.Doctores.Remove(doctor);
+            _db.SaveChanges();
+        }
     }
+
+
+
 }

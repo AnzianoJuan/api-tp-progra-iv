@@ -26,7 +26,6 @@ C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programa
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.api.props
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.api.props
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\api.csproj.Up2Date
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\api.dll
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\refint\api.dll
@@ -167,3 +166,4 @@ C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programa
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\juani\Desktop\acces\UTN-PROGRAMACION\2DO-AÑO\2DO-CUATRIMESTRE\programacion-iv\TP-PROGRA-iv\api\api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

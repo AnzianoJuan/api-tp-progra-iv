@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace api.Dtos.Doctor;
 
@@ -14,8 +13,7 @@ public class CrearDoctorDTO
     public string Apellido { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "El DNI es obligatorio")]
-    [MinLength(7, ErrorMessage = "Debe tener como mínimo 7 dígitos")]
-    [MaxLength(8, ErrorMessage = "Debe tener como máximo 8 dígitos")]
+    [RegularExpression(@"^\d{7,8}$", ErrorMessage = "El DNI debe contener solo 7 u 8 dígitos")]
     public string Dni { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "La fecha de nacimiento es obligatoria")]
@@ -23,8 +21,7 @@ public class CrearDoctorDTO
     public DateOnly FecNac { get; set; }
 
     [Required(ErrorMessage = "Debe dejar su número de teléfono")]
-    [MinLength(10, ErrorMessage = "Debe tener mínimo 10 dígitos")]
-    [MaxLength(11, ErrorMessage = "Debe tener máximo 11 dígitos")]
+    [RegularExpression(@"^\d{10,11}$", ErrorMessage = "El teléfono debe contener solo 10 u 11 dígitos")]
     public string Telefono { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "El email es obligatorio")]
@@ -36,5 +33,6 @@ public class CrearDoctorDTO
     public string Contraseña { get; set; } = string.Empty;
 
     [Required(ErrorMessage = "La especialidad es obligatoria")]
+    [StringLength(100, MinimumLength = 3, ErrorMessage = "La especialidad debe tener entre 3 y 100 caracteres")]
     public string Especialidad { get; set; } = string.Empty;
 }
